@@ -14,6 +14,8 @@ end
 
 def move(board, position, character = current_player(board))
   board[position] = character
+  if position == 0
+    
 end
 
 def position_taken?(board, index)
