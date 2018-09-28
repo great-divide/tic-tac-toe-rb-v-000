@@ -127,3 +127,23 @@ def position_taken?(board, index)
     return true
   end
 end
+
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index)
+    display_board(board)
+  else
+    turn(board)
+  end
+end
+
+def play(board)
+  round = 0
+  until round == 9 do
+    turn(board)
+    round +=1
+  end
+end
