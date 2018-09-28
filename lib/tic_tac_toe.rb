@@ -133,9 +133,13 @@ def turn(board)
 end
 
 def play(board)
-  round = 0
-  until round == 9 do
+  until over?(board)
     turn(board)
-    round +=1
+  end
+  
+  if won?(board)
+    puts "Congratulations, #{current_player}, you won!"
+  elsif draw?(board)
+    puts "The game is a draw."
   end
 end
