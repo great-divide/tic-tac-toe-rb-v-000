@@ -12,8 +12,8 @@ def input_to_index(user_input)
   return user_input.to_i - 1
 end
 
-def move(board, position)
-  board[position] = current_player(board)
+def move(board, position, character)
+  board[position] = character
 end
 
 def position_taken?(board, index)
