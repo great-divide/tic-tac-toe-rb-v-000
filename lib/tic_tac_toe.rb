@@ -14,7 +14,6 @@ end
 
 def move(board, position, current_player(board))
   board[position] = character
-    
 end
 
 def position_taken?(board, index)
