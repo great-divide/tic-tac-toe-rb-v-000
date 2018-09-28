@@ -12,7 +12,7 @@ def input_to_index(user_input)
   return user_input.to_i - 1
 end
 
-def move(board, position, character = current_player(board))
+def move(board, position, character)
   board[position] = character
 end
 
@@ -98,8 +98,8 @@ end
 def current_player(board)
   
   if turn_count(board) % 2 == 0 
-    return "X"
-  else return "O"
+    character = "X"
+  else character "O"
   end
 end
 
